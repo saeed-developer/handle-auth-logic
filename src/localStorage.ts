@@ -23,7 +23,7 @@ export const setItem = ({
     throw new Error("window is undefind");
   }
 };
-export const getItem = ({ tokenKeyName = "token" }: Token) => {
+export const getItem = (tokenKeyName: string = "token") => {
   if (Window) {
     const json: any = localStorage.getItem(tokenKeyName);
     return JSON.parse(json);

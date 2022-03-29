@@ -19,24 +19,25 @@ export const requestToken = ({
   access = "access",
   refresh = "refresh",
 }: RequestToken) => {
-  fetch(url, {
-    method: method,
-    headers: header,
-    body: JSON.stringify(body),
-  })
-    .then((res) => res.json())
-    .then(
-      (res) => {
-        console.log("response", res);
-        setItem({
-          tokenKeyName: tokenKeyName,
-          tokenValue: res[access],
-          refreshValue: res[refresh],
-        });
-        return Number(res.status);
-      },
-      (err) => {
-        return Number(err.status);
-      }
-    );
+  return new Promise((resolve, reject) => {
+    fetch(url, {
+      method: method,
+      headers: header,
+      body: JSON.stringify(body),
+    })
+      .then((res) => res.json())
+      .then(
+        (res) => {
+          setItem({
+            tokenKeyName: tokenKeyName,
+            tokenValue: res[access],
+            refreshValue: res[refresh],
+          });
+          resolve(res.access);
+        },
+        (err) => {
+          reject(err.status);
+        }
+      );
+  });
 };
