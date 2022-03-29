@@ -26,15 +26,11 @@ export const interceptor = ({
 
     axios.interceptors.response.use(
       function (response: any): any {
-        console.log("response", response);
         return response;
       },
       function (error) {
-        console.log("error", error);
         if (error.response.status === code) {
-          console.log("in in in i");
           const handleUnathorized = async () => {
-            console.log("tr");
             const request = await reqeustToken();
             const config = error.config;
             config["headers"]["token"] = request;
