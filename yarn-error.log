@@ -1,0 +1,44 @@
+Arguments: 
+  /usr/bin/node /usr/bin/yarn add --dev jest
+
+PATH: 
+  /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/saeed/Android/Sdk/emulator:/home/saeed/Android/Sdk/tools:/home/saeed/Android/Sdk/tools/bin:/home/saeed/Android/Sdk/platform-tools:/home/saeed/bin:/usr/lib/jvm/java-11-openjdk-amd64/bin:/opt/gradle/gradle-6.9/bin:/home/saeed/Android/Sdk/emulator:/home/saeed/Android/Sdk/tools:/home/saeed/Android/Sdk/tools/bin:/home/saeed/Android/Sdk/platform-tools:/home/saeed/bin:/usr/lib/jvm/java-11-openjdk-amd64/bin:/opt/gradle/gradle-6.9/bin
+
+Yarn version: 
+  1.22.17
+
+Node version: 
+  16.14.2
+
+Platform: 
+  linux x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/typescript: ETIMEDOUT
+      at Timeout._onTimeout (/usr/lib/node_modules/yarn/lib/cli.js:141543:19)
+      at listOnTimeout (node:internal/timers:559:17)
+      at processTimers (node:internal/timers:502:7)
+
+npm manifest: 
+  {
+    "name": "auth-handle-logic",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "type": "commonjs",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+      "typescript": "^4.6.3"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
