@@ -1,0 +1,30 @@
+{
+  "name": "auth-handle-logic",
+  "version": "1.0.0",
+  "description": "The purpose of this package is to help handle authentication in the web",
+  "main": "../lib/index.js",
+  "type": "commonjs",
+  "types": "../lib/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/saeed-developer/handle-auth-logic"
+  },
+  "bugs": {
+    "url": "https://github.com/saeed-developer/handle-auth-logic/issues"
+  },
+  "keywords": [
+    "token",
+    "jwt",
+    "handle-token",
+    "localstorage",
+    "refresh-token"
+  ],
+  "author": "saeed",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^4.6.3"
+  }
+}
