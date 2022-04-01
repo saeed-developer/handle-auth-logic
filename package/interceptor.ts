@@ -16,7 +16,7 @@ export const interceptor = ({
       const code: number = errorCode ?? 401;
       if (response.status === code) {
         const request = await reqeustToken();
-        config["headerss"]["token"] = request;
+        config["headers"]["token"] = request;
         await originalFetch(resource, config);
       }
       return response;
@@ -33,7 +33,7 @@ export const interceptor = ({
           const handleUnathorized = async () => {
             const request = await reqeustToken();
             const config = error.config;
-            config["headerss"]["token"] = request;
+            config["headers"]["token"] = request;
             await axios.request(config);
           };
           handleUnathorized();
