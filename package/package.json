@@ -1,6 +1,6 @@
 {
   "name": "auth-handle-logic",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "The purpose of this package is to help handle authentication in the web",
   "main": "../lib/index.js",
   "type": "commonjs",
