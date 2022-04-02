@@ -37,7 +37,7 @@ export const AuthLogic = (options: AuthenticationLogic) => {
   const tokenKeyName = options["tokenKeyName"] ?? "token";
   const refreshToken = getItem(tokenKeyName);
   const refreshKey = options.refresh ?? "refresh";
-  options.body = { [refreshKey]: refreshToken[refreshKey] };
+  options.body = {...options.body ,[refreshKey]: refreshToken[refreshKey] };
   return interceptor({
     reqeustToken: async () => GetToken(options),
     axios: options["axios"],
